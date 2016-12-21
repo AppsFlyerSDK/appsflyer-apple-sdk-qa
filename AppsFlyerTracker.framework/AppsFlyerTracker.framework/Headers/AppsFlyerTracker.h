@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 1.2.97
+//  AppsFlyer iOS SDK 1.2.98
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -80,7 +80,8 @@
 typedef enum  {
     EmailCryptTypeNone = 0,
     EmailCryptTypeSHA1 = 1,
-    EmailCryptTypeMD5 = 2
+    EmailCryptTypeMD5 = 2,
+    EmailCryptTypeSHA256 = 3
 } EmailCryptType;
 
 /*
