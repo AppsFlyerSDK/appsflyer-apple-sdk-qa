@@ -7,4 +7,4 @@
 #endif
 
 #define kAppsFlyerSDKBuildNumber  @"1.2.111"
-#define kJenkinsBuildNumber  @"88"
+#define kJenkinsBuildNumber  @"89"
