@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 1.2.141
+//  AppsFlyer iOS SDK 1.2.150
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -193,7 +193,7 @@ typedef enum  {
  * Example :
  *      [[AppsFlyer sharedTracker] trackEvent:@"hotel-booked" withValue:"200"];
  */
-- (void) trackEvent:(NSString*)eventName withValue:(NSString*)value;
+- (void) trackEvent:(NSString*)eventName withValue:(NSString*)value __attribute__((deprecated));
 
 /*
  * Use this method to track an events with mulitple values. See AppsFlyer's documentation for details. 
