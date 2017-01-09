@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 1.2.199
+//  AppsFlyer iOS SDK 1.2.200
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -65,14 +65,6 @@
 #define AFEventParamValidated              @"af_validated"
 #define AFEventParamRevenue                @"af_revenue"
 #define AFEventParamReceiptId              @"af_receipt_id"
-#define AFEventParamTutorialId             @"af_tutorial_id"
-#define AFEventParamAchievenmentId         @"af_achievement_id"
-#define AFEventParamVirtualCurrencyName    @"af_virtual_currency_name"
-#define AFEventParamDeepLink               @"af_deep_link"
-#define AFEventParamOldVersion             @"af_old_version"
-#define AFEventParamNewVersion             @"af_new_version"
-#define AFEventParamReviewText             @"af_review_text"
-#define AFEventParamCouponCode             @"af_coupon_code"
 #define AFEventParam1                      @"af_param_1"
 #define AFEventParam2                      @"af_param_2"
 #define AFEventParam3                      @"af_param_3"
@@ -88,8 +80,7 @@
 typedef enum  {
     EmailCryptTypeNone = 0,
     EmailCryptTypeSHA1 = 1,
-    EmailCryptTypeMD5 = 2,
-    EmailCryptTypeSHA256 = 3
+    EmailCryptTypeMD5 = 2
 } EmailCryptType;
 
 /*
@@ -188,11 +179,6 @@ typedef enum  {
 @property (nonatomic, setter = setUseUninstallSandbox:) BOOL useUninstallSandbox;
 
 /*
- * Advertising Id (exposed for RemoteDebug)
- */
-@property (nonatomic, strong) NSString *advertiserId;
-
-/*
  * Use this to send the User's emails
  */
 -(void) setUserEmails:(NSArray *) userEmails withCryptType:(EmailCryptType) type;
@@ -206,7 +192,7 @@ typedef enum  {
  * Example :
  *      [[AppsFlyer sharedTracker] trackEvent:@"hotel-booked" withValue:"200"];
  */
-- (void) trackEvent:(NSString*)eventName withValue:(NSString*)value __attribute__((deprecated));
+- (void) trackEvent:(NSString*)eventName withValue:(NSString*)value;
 
 /*
  * Use this method to track an events with mulitple values. See AppsFlyer's documentation for details. 
@@ -274,8 +260,5 @@ typedef enum  {
 */
 - (NSString *) getSDKVersion;
 
-
-
-- (void) remoteDebuggingCallWithData:(NSString *) data;
 
 @end
