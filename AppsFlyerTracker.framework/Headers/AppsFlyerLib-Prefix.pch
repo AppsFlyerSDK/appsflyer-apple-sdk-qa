@@ -4,7 +4,8 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
 #endif
 
-#define kAppsFlyerSDKBuildNumber  @"1.3.10"
+#define kAppsFlyerSDKBuildNumber  @"1.3.11"
 #define kJenkinsBuildNumber  @"307"
