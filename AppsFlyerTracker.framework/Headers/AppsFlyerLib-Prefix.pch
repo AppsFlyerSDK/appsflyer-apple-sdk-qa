@@ -6,5 +6,5 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#define kAppsFlyerSDKBuildNumber  @"1.3.441"
-#define kJenkinsBuildNumber  @"441"
+#define kAppsFlyerSDKBuildNumber  @"1.3.442"
+#define kJenkinsBuildNumber  @"442"
