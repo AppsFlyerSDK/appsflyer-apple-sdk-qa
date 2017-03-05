@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.6.501
+//  AppsFlyer iOS SDK 4.6.504
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -255,14 +255,9 @@ typedef enum  {
                          transactionId:(NSString *) tranactionId
                   additionalParameters:(NSDictionary *)params
                                success:(void (^)(NSDictionary *response))successBlock
-                               failure:(void (^)(NSError *error, id reponse)) failedBlock __attribute__((deprecated)) NS_AVAILABLE(10_7, 7_0);
+                               failure:(void (^)(NSError *error, id reponse)) failedBlock NS_AVAILABLE(10_7, 7_0);
 
 
-
--(void) validatePurchaseEvent:(NSString *)productIdentifier
-                        price:(NSString *)price
-                     currency:(NSString *)currency
-                transactionId:(NSString *)tranactionId NS_AVAILABLE(10_7, 7_0);
 
 /*
 * To Track location for geo-fencing.
