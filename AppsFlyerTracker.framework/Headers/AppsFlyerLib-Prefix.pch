@@ -6,8 +6,8 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#define kAppsFlyerSDKBuildNumber  @"4.6.517"
-#define kJenkinsBuildNumber  @"517"
+#define kAppsFlyerSDKBuildNumber  @"4.6.523"
+#define kJenkinsBuildNumber  @"523"
 
 #if !defined(AFServerLogInternal)
 #define AFServerLogInternal(fmt, ...) if ([AppsFlyerTracker sharedTracker].isDebug) NSLog((@"AppsFlyer: %s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
