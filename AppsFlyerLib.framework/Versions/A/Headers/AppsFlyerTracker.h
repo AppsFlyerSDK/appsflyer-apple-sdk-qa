@@ -2,11 +2,16 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.7.540
+//  AppsFlyer iOS SDK 4.8.542
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "AppsFlyerCrossPromotionHelper.h"
+#import "AppsFlyerShareInviteHelper.h"
+
+
 
 // In app event names constants
 #define AFEventLevelAchieved            @"af_level_achieved"
@@ -113,7 +118,10 @@
 #define AFEventParamPreferredNeighborhoods  @"af_preferred_neighborhoods" //array of string
 #define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
 
-
+//TODO: Temp placement
+#define kAppsFlyerOneLinkVersion @"oneLinkVersion"
+#define kAppsFlyerOneLinkScheme  @"oneLinkScheme"
+#define kAppsFlyerOneLinkDomain  @"oneLinkDomain"
 
 
 typedef enum  {
@@ -189,6 +197,8 @@ typedef enum  {
  */
 @property (nonatomic, setter = setShouldCollectDeviceName:) BOOL shouldCollectDeviceName;
 
+
+@property (nonatomic, setter = setAppInviteOneLink:) NSString* appInviteOneLinkID;
 
 /*
  * Opt-out tracking for specific user
@@ -309,5 +319,11 @@ typedef enum  {
 
 
 - (void) remoteDebuggingCallWithData:(NSString *) data;
+
+//- (void) crossPromotionViewed:(NSString*) appID campaign:(NSString*) campaign;
+//- (void) openAppStoreForAppID:(NSString*) appID campaign:(NSString*)
+//campaign paramters:(NSDictionary*) parameters
+//               viewController: (UIViewController*) viewController;
+
 
 @end
