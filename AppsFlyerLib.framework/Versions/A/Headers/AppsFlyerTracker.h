@@ -2,12 +2,11 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.8.542
+//  AppsFlyer iOS SDK 4.8.548
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "AppsFlyerCrossPromotionHelper.h"
 #import "AppsFlyerShareInviteHelper.h"
 
