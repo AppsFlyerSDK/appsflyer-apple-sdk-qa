@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)       setReferrerUID       :(nonnull NSString *) referrerUID;
 - (void)       setReferrerName      :(nonnull NSString *) referrerName;
 - (void)       setReferrerImageURL  :(nonnull NSString *) referrerImageURL;
-- (void)       setBaseURL           :(nonnull NSString *) baseURL;
 - (void)       setAppleAppID        :(nonnull NSString *) appleAppID;
 - (void)       setDeeplinkPath      :(nonnull NSString *) deeplinkPath;
 - (void)       setBaseDeeplink      :(nonnull NSString *) baseDeeplink;
