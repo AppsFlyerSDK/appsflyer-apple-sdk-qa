@@ -2,11 +2,15 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.571
+//  AppsFlyer iOS SDK 9.9.574
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "AppsFlyerCrossPromotionHelper.h"
+#import "AppsFlyerShareInviteHelper.h"
+
+
 
 // In app event names constants
 #define AFEventLevelAchieved            @"af_level_achieved"
@@ -31,7 +35,6 @@
 #define AFEventUpdate                   @"af_update"
 #define AFEventOpenedFromPushNotification @"af_opened_from_push_notification"
 #define AFEventLocation                 @"af_location_coordinates"
-#define AFEventOrderId                  @"af_order_id"
 #define AFEventCustomerSegment          @"af_customer_segment"
 
 
@@ -74,6 +77,7 @@
 #define AFEventParamNewVersion             @"af_new_version"
 #define AFEventParamReviewText             @"af_review_text"
 #define AFEventParamCouponCode             @"af_coupon_code"
+#define AFEventParamOrderId                @"af_order_id"
 #define AFEventParam1                      @"af_param_1"
 #define AFEventParam2                      @"af_param_2"
 #define AFEventParam3                      @"af_param_3"
@@ -114,6 +118,14 @@
 #define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
 
 
+#define kAppsFlyerOneLinkVersion @"oneLinkVersion"
+#define kAppsFlyerOneLinkScheme  @"oneLinkScheme"
+#define kAppsFlyerOneLinkDomain  @"oneLinkDomain"
+#define kDefaultOneLink          @"go.onelink.me"
+#define kNoOneLinkFallback       @"https://app.appsflyer.com"
+#define kINviteAppleAppID        @"af_siteid"
+
+
 
 
 typedef enum  {
@@ -139,7 +151,7 @@ typedef enum  {
 @interface AppsFlyerTracker : NSObject {
 
     BOOL _isDebug;
-    BOOL didCollectIAdData;
+    BOOL permitAggregateiAdData;
     BOOL _useReceiptValidationSandbox;
     BOOL _useUninstallSandbox;
     EmailCryptType emailCryptType;
@@ -190,6 +202,8 @@ typedef enum  {
 @property (nonatomic, setter = setShouldCollectDeviceName:) BOOL shouldCollectDeviceName;
 
 
+@property (nonatomic, setter = setAppInviteOneLink:) NSString* appInviteOneLinkID;
+
 /*
  * Opt-out tracking for specific user
  */
@@ -203,7 +217,6 @@ typedef enum  {
 /*
  * AppsFlyer delegate. See AppsFlyerTrackerDelegate abvoe
  */
-//@property (unsafe_unretained, nonatomic) id<AppsFlyerTrackerDelegate> delegate; //RD-5419
 @property (weak, nonatomic) id<AppsFlyerTrackerDelegate> delegate;
 
 /*
@@ -310,5 +323,11 @@ typedef enum  {
 
 
 - (void) remoteDebuggingCallWithData:(NSString *) data;
+
+//- (void) crossPromotionViewed:(NSString*) appID campaign:(NSString*) campaign;
+//- (void) openAppStoreForAppID:(NSString*) appID campaign:(NSString*)
+//campaign paramters:(NSDictionary*) parameters
+//               viewController: (UIViewController*) viewController;
+
 
 @end
