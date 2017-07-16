@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.574
+//  AppsFlyer iOS SDK 9.9.584 (584)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -68,6 +68,7 @@
 #define AFEventParamCustomerUserId         @"af_customer_user_id"
 #define AFEventParamValidated              @"af_validated"
 #define AFEventParamRevenue                @"af_revenue"
+#define AFEventProjectedParamRevenue       @"af_projected_revenue"
 #define AFEventParamReceiptId              @"af_receipt_id"
 #define AFEventParamTutorialId             @"af_tutorial_id"
 #define AFEventParamAchievenmentId         @"af_achievement_id"
