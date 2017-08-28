@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.587 (587)
+//  AppsFlyer iOS SDK 9.9.588 (588)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -340,7 +340,8 @@ typedef enum  {
  *  AppsFlyerTracker.shared().host = "example.com"
  *  @endcode
  */
-@property (nullable, nonatomic, strong) NSString *host;
+
+@property (nonatomic, strong) NSString *host;
 
 /*!
  *  This property is responsible for timeout between sessions in seconds.
