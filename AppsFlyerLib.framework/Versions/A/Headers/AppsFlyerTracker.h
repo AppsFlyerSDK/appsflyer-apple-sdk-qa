@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.584 (584)
+//  AppsFlyer iOS SDK 9.9.587 (587)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -47,7 +47,7 @@
 #define AFEventParamPrice                  @"af_price"
 #define AFEventParamContentType            @"af_content_type"
 #define AFEventParamContentId              @"af_content_id"
-#define AFEventParamContentList            @"ad_content_list"
+#define AFEventParamContentList            @"af_content_list"
 #define AFEventParamCurrency               @"af_currency"
 #define AFEventParamQuantity               @"af_quantity"
 #define AFEventParamRegistrationMethod     @"af_registration_method"
@@ -330,5 +330,22 @@ typedef enum  {
 //campaign paramters:(NSDictionary*) parameters
 //               viewController: (UIViewController*) viewController;
 
+/*!
+ *  @brief This property accepts a string value representing the host name for all enpoints.
+ *  @warning To use `default` SDK endpoint – set value to `nil`.
+ *  @code
+ *  Objective-C:
+ *  [[AppsFlyerTracker sharedTracker] setHost:@"example.com"];
+ *  Swift:
+ *  AppsFlyerTracker.shared().host = "example.com"
+ *  @endcode
+ */
+@property (nullable, nonatomic, strong) NSString *host;
 
+/*!
+ *  This property is responsible for timeout between sessions in seconds.
+ *  Default value is 5 seconds.
+ */
+@property (atomic) NSUInteger minTimeBetweenSessions;
+    
 @end

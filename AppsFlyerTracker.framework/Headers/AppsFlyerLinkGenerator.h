@@ -36,6 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)       addParameterValue    :(nonnull NSString *) value forKey:(NSString*)key;
 - (void)       addParameters        :(nonnull NSDictionary*) parameters;
 - (nonnull NSString *) generateLink;
+
+/*!
+ *  Create the defined tracking link behind a shortened OneLink.
+ *  @param completionHandler Called when link will be ready. If error occured - you will receive long link.
+ */
+- (void) generateOneLinkWithCompletionHandler:(void (^)(NSURL * _Nullable url))completionHandler;
+
 @end
 
 NS_ASSUME_NONNULL_END
