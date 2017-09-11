@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "AppsFlyerLinkGenerator.h"
+
 @interface AppsFlyerShareInviteHelper : NSObject
 
 NS_ASSUME_NONNULL_BEGIN
 
-+ (AppsFlyerLinkGenerator* _Nonnull) generateInviteUrl;
+/*!
+ *  Generates short invite url based on `generator`
+ */
++ (void) generateInviteUrlWithLinkGenerator:(AppsFlyerLinkGenerator * (^)(AppsFlyerLinkGenerator *generator))generatorCreator
+                          completionHandler:(void (^)(NSURL * _Nullable url))completionHandler;
 
 + (void) trackInvite:(nullable NSString *) channel
           parameters:(nullable NSDictionary *)parameters;
