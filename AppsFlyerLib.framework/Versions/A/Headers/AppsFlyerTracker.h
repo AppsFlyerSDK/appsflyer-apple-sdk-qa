@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.605 (605)
+//  AppsFlyer iOS SDK 9.9.607 (607)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -150,13 +150,7 @@ typedef enum  {
 @end
 
 @interface AppsFlyerTracker : NSObject {
-
-    BOOL _isDebug;
     BOOL permitAggregateiAdData;
-    BOOL _useReceiptValidationSandbox;
-    BOOL _useUninstallSandbox;
-    EmailCryptType emailCryptType;
-    NSArray *userEmails;
 }
 
 +(AppsFlyerTracker*) sharedTracker;
