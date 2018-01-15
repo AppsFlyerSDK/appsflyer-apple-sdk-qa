@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.616 (616)
+//  AppsFlyer iOS SDK 9.9.619 (619)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -333,5 +333,10 @@ typedef enum  {
  *  Default value is 5 seconds.
  */
 @property (atomic) NSUInteger minTimeBetweenSessions;
-    
+
+/*!
+ *  WARNING! This will disable all requests from AppsFlyer SDK
+ */
+@property (atomic) BOOL isStopTracking;
+
 @end
