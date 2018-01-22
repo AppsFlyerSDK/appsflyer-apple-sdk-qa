@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.621 (621)
+//  AppsFlyer iOS SDK 9.9.622 (622)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -187,8 +187,8 @@ typedef enum  {
 @property (nonatomic, setter = setIsDebug:) BOOL isDebug;
 
 
-/*
- * Set this flag to NO, to not collect the device name.
+/*!
+ *  Set this flag to `YES`, to collect the current device name. Default value is `NO`
  */
 @property (nonatomic, setter = setShouldCollectDeviceName:) BOOL shouldCollectDeviceName;
 
