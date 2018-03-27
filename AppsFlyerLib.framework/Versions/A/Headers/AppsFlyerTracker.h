@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.623 (623)
+//  AppsFlyer iOS SDK 9.9.630 (630)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -36,10 +36,10 @@
 #define AFEventOpenedFromPushNotification @"af_opened_from_push_notification"
 #define AFEventLocation                 @"af_location_coordinates"
 #define AFEventCustomerSegment          @"af_customer_segment"
-#define AFEventContent                  @"af_content"
 
 
 // In app event parameter names
+#define AFEventParamContent                @"af_content"
 #define AFEventParamAchievenmentId         @"af_achievement_id"
 #define AFEventParamLevel                  @"af_level"
 #define AFEventParamScore                  @"af_score"
