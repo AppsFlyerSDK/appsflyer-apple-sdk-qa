@@ -2,14 +2,13 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.631 (631)
+//  AppsFlyer iOS SDK 9.9.634 (634)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "AppsFlyerCrossPromotionHelper.h"
 #import "AppsFlyerShareInviteHelper.h"
-
 
 
 // In app event names constants
@@ -127,6 +126,11 @@
 #define kINviteAppleAppID        @"af_siteid"
 
 
+typedef NS_OPTIONS(NSUInteger, AppsFlyerPrivacies) {
+    AppsFlyerPrivaciesNone                   = 0,
+    AppsFlyerPrivaciesAttribution            = 1 << 0,
+    AppsFlyerPrivaciesDeviceAttributes       = 1 << 1
+};
 
 
 typedef enum  {
@@ -338,5 +342,10 @@ typedef enum  {
  *  WARNING! This will disable all requests from AppsFlyer SDK
  */
 @property (atomic) BOOL isStopTracking;
+
+/// Pause SDK activity until `customerUserId` gets a value
+@property (nonatomic) BOOL isWaitCustomerUserId;
+
+@property (nonatomic) AppsFlyerPrivacies privacies;
 
 @end
