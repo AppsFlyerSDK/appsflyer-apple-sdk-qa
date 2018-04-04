@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.634 (634)
+//  AppsFlyer iOS SDK 9.9.637 (637)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -126,10 +126,10 @@
 #define kINviteAppleAppID        @"af_siteid"
 
 
-typedef NS_OPTIONS(NSUInteger, AppsFlyerPrivacies) {
-    AppsFlyerPrivaciesNone                   = 0,
-    AppsFlyerPrivaciesAttribution            = 1 << 0,
-    AppsFlyerPrivaciesDeviceAttributes       = 1 << 1
+typedef NS_OPTIONS(NSUInteger, AppsFlyerPrivacy) {
+    AppsFlyerPrivacyNone                   = 0,
+    AppsFlyerPrivacyAttributionData        = 1 << 0,
+    AppsFlyerPrivacyDeviceAttributes       = 1 << 1
 };
 
 
@@ -153,9 +153,7 @@ typedef enum  {
 
 @end
 
-@interface AppsFlyerTracker : NSObject {
-    BOOL permitAggregateiAdData;
-}
+@interface AppsFlyerTracker : NSObject
 
 +(AppsFlyerTracker*) sharedTracker;
 
@@ -346,6 +344,6 @@ typedef enum  {
 /// Pause SDK activity until `customerUserId` gets a value
 @property (nonatomic) BOOL isWaitCustomerUserId;
 
-@property (nonatomic) AppsFlyerPrivacies privacies;
+- (void)setSDKPrivacy:(AppsFlyerPrivacy)privacy;
 
 @end
