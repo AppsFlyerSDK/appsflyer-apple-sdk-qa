@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.691 (691)
+//  AppsFlyer iOS SDK 9.9.704 (704)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -127,9 +127,9 @@
 
 
 typedef NS_OPTIONS(NSUInteger, AppsFlyerPrivacy) {
-    AppsFlyerPrivacyNone              = 0,
-    AppsFlyerPrivacyDeviceAttributes  = 1 << 0,
-    AppsFlyerPrivacyAttributionData   = 1 << 1
+    AppsFlyerPrivacyNone                   = 0,
+    AppsFlyerPrivacyAttributionData        = 1 << 0,
+    AppsFlyerPrivacyDeviceAttributes       = 1 << 1
 };
 
 
