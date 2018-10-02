@@ -2,8 +2,8 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.720 (720)
-//  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
+//  AppsFlyer iOS SDK 9.9.730 (730)
+//  Copyright (c) 2018 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
