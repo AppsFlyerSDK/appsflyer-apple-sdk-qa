@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.746 (746)
+//  AppsFlyer iOS SDK 9.9.751 (751)
 //  Copyright (c) 2018 AppsFlyer Ltd. All rights reserved.
 //
 
