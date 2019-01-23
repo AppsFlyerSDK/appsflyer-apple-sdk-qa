@@ -2,8 +2,8 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.771 (771)
-//  Copyright (c) 2018 AppsFlyer Ltd. All rights reserved.
+//  AppsFlyer iOS SDK 9.9.775 (775)
+//  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -290,6 +290,18 @@ typedef enum  {
 @property (nonatomic, strong) NSString *advertiserId;
 
 /**
+ For advertisers who wrap OneLink within another Universal Link.
+ An advertiser will be able to deeplink from a OneLink wrapped within another Universal Link and also track this retargeting conversion.
+ 
+ Objective-C:
+ 
+ <pre>
+ [[AppsFlyerTracker sharedTracker] setResolveDeepLinkURLs:@[@"domain.com", @"subdomain.domain.com"]];
+ </pre>
+ */
+@property (nonatomic) NSArray<NSString *> *resolveDeepLinkURLs;
+
+/**
  Use this to send the user's emails
  
  @param userEmails The list of strings that hold mails
@@ -489,6 +501,19 @@ typedef enum  {
  </pre>
  */
 @property (nonatomic, strong) NSString *host;
+
+- (void)setHost:(NSString *)host DEPRECATED_MSG_ATTRIBUTE("Use -[AppsFlyerTracker setHost:withHostPrefix:] instead");
+
+/**
+ * This function set the host name and prefix host name for all the endpoints
+ **/
+- (void)setHost:(NSString *)host withHostPrefix:(NSString *)hostPrefix;
+
+/**
+ * This property accepts a string value representing the prefix host name for all endpoints.
+ * for example "test" prefix with default host name will have the address "host.appsflyer.com"
+ */
+@property (nonatomic, strong, readonly) NSString *hostPrefix;
 
 /**
  This property is responsible for timeout between sessions in seconds.
