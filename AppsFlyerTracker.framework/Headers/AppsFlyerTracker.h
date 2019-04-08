@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.809 (809)
+//  AppsFlyer iOS SDK 9.9.818 (818)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -316,6 +316,8 @@ typedef enum  {
  */
 - (void)trackAppLaunch;
 
+- (void)trackAppLaunchWithCompletionHandler:(void (^)(NSDictionary<NSString *, id> *dictionary, NSError *error))completionHandler;
+
 /**
  Use this method to track events in your app like purchases or user actions
  
@@ -356,6 +358,11 @@ typedef enum  {
  @param values Contains dictionary of values for handling by backend
  */
 - (void)trackEvent:(NSString *)eventName withValues:(NSDictionary *)values;
+
+- (void)trackEventWithEventName:(NSString *)eventName
+                    eventValues:(NSDictionary<NSString * , id> *)eventValues
+              completionHandler:(void (^)(NSDictionary<NSString *, id> * dictionary, NSError * error))completionHandler
+NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
 
 /**
  To track and validate in app purchases you can call this method from the completeTransaction: method on
