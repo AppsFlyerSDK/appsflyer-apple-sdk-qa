@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.829 (829)
+//  AppsFlyer iOS SDK 9.9.831 (831)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -302,6 +302,51 @@ typedef enum  {
  */
 @property(nonatomic) NSArray<NSString *> *resolveDeepLinkURLs;
 
+
+/**
+ Manually set a Facebook Deferred App Link to the AppsFlyer Platform.
+ This API can be used if a client wishes to handle Facebook deferred deep-links independently of AppsFlyer,
+ but still pass this data to the AppsFlyer Platform.
+ This API must be invoked prior to initializing the AppsFlyer SDK in order to function properly.
+ IMPORTANT: Setting the app link manually will override any app link that is automatically
+ collected by our SDK (using the {@link #enableFacebookDeferredApplinks} API)
+ */
+@property(nonatomic) NSString *facebookDeferredApplink;
+
+
+
+/**
+ For advertisers who use vanity OneLinks.
+ 
+ Objective-C:
+ 
+ <pre>
+ [[AppsFlyerTracker sharedTracker] oneLinkCustomDomains:@[@"domain.com", @"subdomain.domain.com"]];
+ </pre>
+ */
+@property(nonatomic) NSArray<NSString *> *oneLinkCustomDomains;
+
+/**
+ Enable the collection of Facebook Deferred AppLinks
+ Requires Facebook SDK and Facebook app on target/client device.
+ This API must be invoked prior to initializing the AppsFlyer SDK in order to function properly.
+ 
+ Objective-C:
+ 
+ <pre>
+ [[AppsFlyerTracker sharedTracker] enableFacebookDeferredApplinksWithClass:[FBSDKAppLinkUtility class]]
+ </pre>
+ 
+ Swift:
+ 
+ <pre>
+ AppsFlyerTracker.shared().enableFacebookDeferredApplinks(with: FBSDKAppLinkUtility.self)
+ </pre>
+ 
+ @param facebookAppLinkUtilityClass requeries method call `[FBSDKAppLinkUtility class]` as param.
+ */
+- (void)enableFacebookDeferredApplinksWithClass:(Class)facebookAppLinkUtilityClass;
+
 /**
  Use this to send the user's emails
  
@@ -360,8 +405,8 @@ typedef enum  {
 - (void)trackEvent:(NSString *)eventName withValues:(NSDictionary *)values;
 
 - (void)trackEventWithEventName:(NSString *)eventName
-                    eventValues:(NSDictionary<NSString * , id> *)eventValues
-              completionHandler:(void (^)(NSDictionary<NSString *, id> * dictionary, NSError * error))completionHandler
+                    eventValues:(NSDictionary<NSString * , id> * )eventValues
+              completionHandler:(void (^)(NSDictionary<NSString *, id> *dictionary, NSError *error))completionHandler
 NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
 
 /**
