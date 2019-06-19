@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.831 (831)
+//  AppsFlyer iOS SDK 9.9.832 (832)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -301,19 +301,6 @@ typedef enum  {
  </pre>
  */
 @property(nonatomic) NSArray<NSString *> *resolveDeepLinkURLs;
-
-
-/**
- Manually set a Facebook Deferred App Link to the AppsFlyer Platform.
- This API can be used if a client wishes to handle Facebook deferred deep-links independently of AppsFlyer,
- but still pass this data to the AppsFlyer Platform.
- This API must be invoked prior to initializing the AppsFlyer SDK in order to function properly.
- IMPORTANT: Setting the app link manually will override any app link that is automatically
- collected by our SDK (using the {@link #enableFacebookDeferredApplinks} API)
- */
-@property(nonatomic) NSString *facebookDeferredApplink;
-
-
 
 /**
  For advertisers who use vanity OneLinks.
