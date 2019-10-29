@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.897 (897)
+//  AppsFlyer iOS SDK 9.9.913 (913)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -320,6 +320,11 @@ typedef enum  {
 
 - (NSString *)phoneNumber UNAVAILABLE_ATTRIBUTE;
 
+/**
+ To disable app's vendor identifier(IDFV), set disableIDFVCollection to true
+ */
+@property(nonatomic) BOOL disableIDFVCollection;
+    
 /**
  Enable the collection of Facebook Deferred AppLinks
  Requires Facebook SDK and Facebook app on target/client device.
