@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.914 (914)
+//  AppsFlyer iOS SDK 9.9.918 (918)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -153,17 +153,19 @@ typedef enum  {
  */
 @protocol AppsFlyerTrackerDelegate <NSObject>
 
-@optional
 /**
- `installData` contains information about install.
+ `conversionInfo` contains information about install.
  Organic/non-organic, etc.
+ @param conversionInfo May contain <code>null</code> values for some keys. Please handle this case.
  */
-- (void)onConversionDataReceived:(NSDictionary *)installData;
+- (void)onConversionDataSuccess:(NSDictionary *)conversionInfo;
 
 /**
  Any errors that occurred during the conversion request.
  */
-- (void)onConversionDataRequestFailure:(NSError *)error;
+- (void)onConversionDataFail:(NSError *)error;
+
+@optional
 
 /**
  `attributionData` contains information about OneLink, deeplink.
@@ -448,14 +450,6 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
 - (NSString *)getAppsFlyerUID;
 
 /**
- In case you want to use AppsFlyer tracking data in your app you can use the following method set a
- delegate with callback buttons for the tracking data. See AppsFlyerTrackerDelegate above.
- 
- @param delegate The AppsFlyer delegate reference
- */
-- (void)loadConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>)delegate __attribute__((deprecated));
-
-/**
  In case you want to track deep linking. Does the same as `-handleOpenURL:sourceApplication:withAnnotation`.
  
  @warning Prefered to use `-handleOpenURL:sourceApplication:withAnnotation`.
@@ -553,8 +547,6 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  </pre>
  */
 @property(nonatomic, strong) NSString *host;
-
-- (void)setHost:(NSString *)host DEPRECATED_MSG_ATTRIBUTE("Use -[AppsFlyerTracker setHost:withHostPrefix:] instead");
 
 /**
  * This function set the host name and prefix host name for all the endpoints
