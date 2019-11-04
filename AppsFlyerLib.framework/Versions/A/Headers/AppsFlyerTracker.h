@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.918 (918)
+//  AppsFlyer iOS SDK 9.9.919 (919)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -153,19 +153,17 @@ typedef enum  {
  */
 @protocol AppsFlyerTrackerDelegate <NSObject>
 
+@optional
 /**
- `conversionInfo` contains information about install.
+ `installData` contains information about install.
  Organic/non-organic, etc.
- @param conversionInfo May contain <code>null</code> values for some keys. Please handle this case.
  */
-- (void)onConversionDataSuccess:(NSDictionary *)conversionInfo;
+- (void)onConversionDataReceived:(NSDictionary *)installData;
 
 /**
  Any errors that occurred during the conversion request.
  */
-- (void)onConversionDataFail:(NSError *)error;
-
-@optional
+- (void)onConversionDataRequestFailure:(NSError *)error;
 
 /**
  `attributionData` contains information about OneLink, deeplink.
@@ -176,6 +174,15 @@ typedef enum  {
  Any errors that occurred during the attribution request.
  */
 - (void)onAppOpenAttributionFailure:(NSError *)error;
+
+/**
+ @abstract Sets the HTTP header fields of the ESP resolving to the given
+ dictionary.
+ @discussion This method replaces all header fields that may have
+ existed before this method ESP resolving call.
+ To keep default SDK dehavior - return nil;
+ */
+- (NSDictionary <NSString *, NSString *> *)allHTTPHeaderFieldsForResolveDeepLinkURL:(NSURL *)URL;
 
 @end
 
@@ -450,6 +457,14 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
 - (NSString *)getAppsFlyerUID;
 
 /**
+ In case you want to use AppsFlyer tracking data in your app you can use the following method set a
+ delegate with callback buttons for the tracking data. See AppsFlyerTrackerDelegate above.
+ 
+ @param delegate The AppsFlyer delegate reference
+ */
+- (void)loadConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>)delegate __attribute__((deprecated));
+
+/**
  In case you want to track deep linking. Does the same as `-handleOpenURL:sourceApplication:withAnnotation`.
  
  @warning Prefered to use `-handleOpenURL:sourceApplication:withAnnotation`.
@@ -547,6 +562,8 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  </pre>
  */
 @property(nonatomic, strong) NSString *host;
+
+- (void)setHost:(NSString *)host DEPRECATED_MSG_ATTRIBUTE("Use -[AppsFlyerTracker setHost:withHostPrefix:] instead");
 
 /**
  * This function set the host name and prefix host name for all the endpoints
