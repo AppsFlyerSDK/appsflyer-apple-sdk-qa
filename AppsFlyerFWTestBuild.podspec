@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AppsFlyerFWTestBuild'
-    s.version          = '9.9.921'
+    s.version          = '9.9.922'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     s.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
     s.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
 
-    s.macos.preserve_paths = 'macOS/AppsFlyerLib macOS.framework'
-    s.macos.vendored_frameworks = 'macOS/AppsFlyerLib macOS.framework'
+    s.macos.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
+    s.macos.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
 
 end

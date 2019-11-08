@@ -1,4 +1,4 @@
-framework module AppsFlyerLib-macOS {
+framework module AppsFlyerAttribution {
  umbrella header "AppsFlyerTracker.h" 
 
   export *
