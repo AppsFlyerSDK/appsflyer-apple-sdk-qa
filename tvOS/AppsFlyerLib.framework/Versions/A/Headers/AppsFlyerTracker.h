@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 9.9.920 (920)
+//  AppsFlyer iOS SDK 9.9.924 (924)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -548,7 +548,7 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  AppsFlyerTracker.shared().host = "example.com"
  </pre>
  */
-@property(nonatomic, strong) NSString *host;
+@property(nonatomic, strong, readonly) NSString *host;
 
 /**
  * This function set the host name and prefix host name for all the endpoints
