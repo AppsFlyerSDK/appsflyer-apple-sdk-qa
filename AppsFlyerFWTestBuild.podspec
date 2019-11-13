@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AppsFlyerFWTestBuild'
-    s.version          = '0.0.2'
+    s.version          = '0.0.3'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -14,15 +14,15 @@ Pod::Spec.new do |s|
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
     s.source           = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFWTestBuild.git', :tag => s.version.to_s }
     s.requires_arc = true
-    s.platform     = :ios, :tvos, :macos
+    s.platform     = :ios, :tvos, :osx
 
     s.ios.deployment_target = '8.0'
     s.tvos.deployment_target = '9.0'
-    s.macos.deployment_target = '10.11'
+    s.osx.deployment_target = '10.11'
 
     s.ios.frameworks = 'AdSupport', 'iAd', 'Security', 'SystemConfiguration', 'CoreTelephony'
     s.tvos.frameworks  = 'AdSupport', 'Security'
-    s.macos.frameworks  = 'AdSupport', 'Security'
+    s.osx.frameworks  = 'AdSupport', 'Security'
 
     s.ios.preserve_paths = 'AppsFlyerLib.framework'
     s.ios.vendored_frameworks = 'AppsFlyerLib.framework'
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     s.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
     s.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
 
-    s.macos.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
-    s.macos.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+    s.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
+    s.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
 
 end
