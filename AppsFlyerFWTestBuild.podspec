@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AppsFlyerFWTestBuild'
-    s.version          = '9.9.922'
+    s.version          = '0.0.2'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
     s.source           = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFWTestBuild.git', :tag => s.version.to_s }
     s.requires_arc = true
-    s.platform     = :ios, :tvos
+    s.platform     = :ios, :tvos, :macos
 
     s.ios.deployment_target = '8.0'
     s.tvos.deployment_target = '9.0'
