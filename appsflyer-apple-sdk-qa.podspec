@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '5.2.0.961'
+    s.version          = '5.2.0.112'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     DESC
 
     s.homepage         = 'https://www.appsflyer.com'
-    s.license          = { :type => 'Proprietary', :text => 'Copyright 2020 AppsFlyer Ltd. All rights reserved.' }
+    s.license          = { :type => 'Proprietary', :text => 'Copyright 2018 AppsFlyer Ltd. All rights reserved.' }
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
     s.source           = { :git => 'https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa.git', :tag => s.version.to_s }
     s.requires_arc = true
