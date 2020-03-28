@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 5.3.0.117.117.117.117.117.117.117.117.117.117.117 (117)
+//  AppsFlyer iOS SDK 5.3.0.118.118.118.118.118.118.118.118.118.118.118.118 (118)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
