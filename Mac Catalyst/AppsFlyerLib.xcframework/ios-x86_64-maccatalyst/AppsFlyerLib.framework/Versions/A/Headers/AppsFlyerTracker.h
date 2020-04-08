@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 5.3.0.121.121.121 (121)
+//  AppsFlyer iOS SDK 5.3.0.126 (126)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -404,7 +404,7 @@ typedef enum  {
  
  <pre>
  AppsFlyerTracker.shared().trackEvent(AFEventPurchase,
-        withValues: [AFEventParamRevenue  : "1210",
+        withValues: [AFEventParamRevenue  : "1200",
                      AFEventParamContent  : "shoes",
                      AFEventParamContentId: "123"])
  </pre>
