@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.0.158 (158)
+//  AppsFlyer iOS SDK 6.0.0.159 (159)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -232,6 +232,16 @@ typedef enum  {
 @property(nonatomic, strong) NSString * appleAppID;
 
 /**
+ AppsFlyer SDK collect Apple's `advertisingIdentifier` if the `AdSupport.framework` included in the SDK.
+ You can disable this behavior by setting the following property to YES
+*/
+@property(nonatomic) BOOL disableAdvertisingIdentifier;
+
+@property(nonatomic, strong, readonly) NSString *advertisingIdentifier;
+
+- (void)waitForAdvertisingIdentifierWithTimeoutInterval:(NSTimeInterval)timeoutInterval;
+
+/**
  In case of in app purchase events, you can set the currency code your user has purchased with.
  The currency code is a 3 letter code according to ISO standards
  
@@ -324,9 +334,6 @@ typedef enum  {
  To disable app's vendor identifier(IDFV), set disableIDFVCollection to true
  */
 @property(nonatomic) BOOL disableIDFVCollection;
-    
-- (void)waitForValueWithName:(NSString *)name timeoutInterval:(NSTimeInterval)timeoutInterval;
-- (void)setValue:(id)value withName:(NSString *)name;
 
 /**
  Enable the collection of Facebook Deferred AppLinks
