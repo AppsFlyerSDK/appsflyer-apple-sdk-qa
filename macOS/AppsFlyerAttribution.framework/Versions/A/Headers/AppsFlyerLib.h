@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.0.159 (159)
+//  AppsFlyer iOS SDK 6.1.0.164 (164)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -240,6 +240,8 @@ typedef enum  {
 @property(nonatomic, strong, readonly) NSString *advertisingIdentifier;
 
 - (void)waitForAdvertisingIdentifierWithTimeoutInterval:(NSTimeInterval)timeoutInterval;
+
+@property(nonatomic) BOOL disableSKAdNetwork;
 
 /**
  In case of in app purchase events, you can set the currency code your user has purchased with.
