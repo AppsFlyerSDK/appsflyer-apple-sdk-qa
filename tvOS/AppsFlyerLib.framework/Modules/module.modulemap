@@ -1,5 +1,5 @@
 framework module AppsFlyerLib {
-umbrella header "AppsFlyerLib.h"
+umbrella header "AppsFlyerTracker.h"
 
 export *
 module * { export * }
