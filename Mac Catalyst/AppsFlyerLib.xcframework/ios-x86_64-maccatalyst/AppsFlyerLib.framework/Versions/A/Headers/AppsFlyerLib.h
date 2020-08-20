@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.2.170 (170)
+//  AppsFlyer iOS SDK 6.0.2.171 (171)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -273,7 +273,7 @@ typedef enum  {
 /**
  Opt-out logging for specific user
  */
-@property(atomic) BOOL deviceLoggingDisabled;
+@property(atomic) BOOL anonymizeUser;
 
 /**
  Opt-out for Apple Search Ads attributions
