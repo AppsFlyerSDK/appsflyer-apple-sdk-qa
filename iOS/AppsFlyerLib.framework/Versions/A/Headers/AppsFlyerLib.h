@@ -2,8 +2,8 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.2.172 (172)
-//  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
+//  AppsFlyer iOS SDK 6.0.2.173 (173)
+//  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
