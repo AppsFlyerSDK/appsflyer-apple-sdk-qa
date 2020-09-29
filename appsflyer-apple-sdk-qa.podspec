@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.0.4.186'
+    s.version          = '6.0.4.187'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.tvos.deployment_target = '9.0'
     s.osx.deployment_target = '10.11'
 
-    s.ios.frameworks = 'AdSupport', 'iAd', 'Security', 'SystemConfiguration', 'CoreTelephony'
+    s.ios.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony'
     s.tvos.frameworks  = 'AdSupport', 'Security'
     s.osx.frameworks  = 'AdSupport', 'Security'
 
