@@ -2,13 +2,16 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.6.197 (197)
+//  AppsFlyer iOS SDK 6.1.0.1 (1)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "AppsFlyerCrossPromotionHelper.h"
 #import "AppsFlyerShareInviteHelper.h"
+
+#import "AFSDKDeepLinkObserver.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -288,6 +291,8 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  AppsFlyer delegate. See `AppsFlyerLibDelegate`
  */
 @property(weak, nonatomic) id<AppsFlyerLibDelegate> delegate;
+
+@property(readonly) AFSDKDeepLinkObserver *deepLinkObserver;
 
 /**
  In app purchase receipt validation Apple environment(production or sandbox). The default value is NO
