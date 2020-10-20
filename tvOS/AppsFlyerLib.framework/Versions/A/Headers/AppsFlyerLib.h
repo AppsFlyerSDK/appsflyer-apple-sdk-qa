@@ -2,16 +2,13 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.1.0.2 (2)
+//  AppsFlyer iOS SDK 6.0.7.5 (5)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "AppsFlyerCrossPromotionHelper.h"
 #import "AppsFlyerShareInviteHelper.h"
-
-#import "AFSDKDeepLinkObserver.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -291,8 +288,6 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  AppsFlyer delegate. See `AppsFlyerLibDelegate`
  */
 @property(weak, nonatomic) id<AppsFlyerLibDelegate> delegate;
-
-@property(readonly) AFSDKDeepLinkObserver *deepLinkObserver;
 
 /**
  In app purchase receipt validation Apple environment(production or sandbox). The default value is NO
@@ -589,6 +584,18 @@ NS_SWIFT_NAME(logEvent(name:values:completionHandler:));
  This method overwrite -[AppsFlyerLib setSharingFilter:]
  */
 -(void)setSharingFilterForAllPartners;
+
+/**
+ Validate url host with certain regex and append quiery
+ parameters to deeplink url. In case if URL was not validated with the regex,
+ parameters are not appended to the url.
+ 
+ @param regularExpression  Regular expression for url validation.
+ @param parameters NSDictionary, which containins parameters to append to the deeplink url after it passed regex validation.
+ */
+- (void)appendParametersToDeepLinkingURLWithRegularExpression:(NSRegularExpression *)regularExpression
+                                                   parameters:(NSDictionary<NSString *, NSString*> *)parameters
+NS_SWIFT_NAME(appendParametersToDeeplinkURL(regularExpression:parameters:));
 
 @end
 
