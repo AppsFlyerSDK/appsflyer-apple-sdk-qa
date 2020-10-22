@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.8.8 (8)
+//  AppsFlyer iOS SDK 6.0.8.10 (10)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -586,16 +586,16 @@ NS_SWIFT_NAME(logEvent(name:values:completionHandler:));
 -(void)setSharingFilterForAllPartners;
 
 /**
- Validate url host with certain regex and append quiery
- parameters to deeplink url. In case if URL was not validated with the regex,
+ Validate if URL contains certain string and append quiery
+ parameters to deeplink URL. In case if URL does not contain user-defined string,
  parameters are not appended to the url.
  
- @param regularExpression  Regular expression for url validation.
- @param parameters NSDictionary, which containins parameters to append to the deeplink url after it passed regex validation.
+ @param containsString string to check in URL.
+ @param parameters NSDictionary, which containins parameters to append to the deeplink url after it passed validation.
  */
-- (void)appendParametersToDeepLinkingURLWithRegularExpression:(NSRegularExpression *)regularExpression
+- (void)appendParametersToDeepLinkingURLWithString:(NSString *)containsString
                                                    parameters:(NSDictionary<NSString *, NSString*> *)parameters
-NS_SWIFT_NAME(appendParametersToDeeplinkURL(regularExpression:parameters:));
+NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
 
 @end
 
