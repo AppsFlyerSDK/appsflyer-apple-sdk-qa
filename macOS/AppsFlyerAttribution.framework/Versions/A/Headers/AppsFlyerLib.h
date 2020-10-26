@@ -2,19 +2,15 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.1.0.11 (11)
+//  AppsFlyer iOS SDK 6.0.8.12 (12)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
 #import "AppsFlyerCrossPromotionHelper.h"
 #import "AppsFlyerShareInviteHelper.h"
-#import "AppsFlyerDeepLinkObserver.h"
-#import "AppsFlyerDeepLinkResult.h"
-#import "AppsFlyerDeepLink.h"
-
 NS_ASSUME_NONNULL_BEGIN
+
 
 // In app event names constants
 #define AFEventLevelAchieved            @"af_level_achieved"
@@ -292,8 +288,6 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  AppsFlyer delegate. See `AppsFlyerLibDelegate`
  */
 @property(weak, nonatomic) id<AppsFlyerLibDelegate> delegate;
-
-@property(readonly) AppsFlyerDeepLinkObserver *deepLinkObserver;
 
 /**
  In app purchase receipt validation Apple environment(production or sandbox). The default value is NO
