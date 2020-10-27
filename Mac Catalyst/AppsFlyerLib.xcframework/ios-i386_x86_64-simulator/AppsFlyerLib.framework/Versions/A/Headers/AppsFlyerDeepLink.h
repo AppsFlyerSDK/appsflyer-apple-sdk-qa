@@ -18,10 +18,8 @@ NS_SWIFT_NAME(DeepLink)
 @property (readonly, nonnull) NSDictionary<NSString *, id> *clickEvent;
 // The `timestamp` is ISO 8601 UTC format
 @property (readonly, nullable) NSString *timestamp;
-@property (readonly, nullable) NSString *originalURL;
 @property (readonly, nullable) NSString *deeplinkValue;
 @property (readonly, nullable) NSString *matchType;
-@property (readonly, nullable) NSString *campaignType;
 @property (readonly, nullable) NSString *clickHTTPReferrer;
 @property (readonly, nullable) NSString *mediaSource;
 @property (readonly, nullable) NSString *campaign;
