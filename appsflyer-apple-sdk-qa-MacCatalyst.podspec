@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa-MacCatalyst'
-    s.version          = '6.0.9.17'
+    s.version          = '6.0.9.18'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -24,8 +24,8 @@ Pod::Spec.new do |s|
     s.tvos.frameworks  = 'Security'
     s.osx.frameworks  = 'Security'
 
-    s.ios.preserve_paths = 'Mac\ Catalyst/AppsFlyerLib.xcframework'
-    s.ios.vendored_frameworks = 'Mac\ Catalyst/AppsFlyerLib.xcframework'
+    s.ios.preserve_paths = 'MacCatalyst/AppsFlyerLib.xcframework'
+    s.ios.vendored_frameworks = 'MacCatalyst/AppsFlyerLib.xcframework'
 
     s.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
     s.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
