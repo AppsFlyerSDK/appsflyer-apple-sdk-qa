@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.1.1.30'
+    s.version          = '6.1.1.32'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -33,13 +33,22 @@ Pod::Spec.new do |s|
        ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
        ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
   end
-  s.subspec 'NoIDFA' do |ss|
-       ss.ios.preserve_paths = 'iOS-NoIDFA/AppsFlyerLib.framework'
-       ss.ios.vendored_frameworks = 'iOS-NoIDFA/AppsFlyerLib.framework'
+  s.subspec 'Strict' do |ss|
+       ss.ios.preserve_paths = 'iOS-Strict/AppsFlyerLib.framework'
+       ss.ios.vendored_frameworks = 'iOS-Strict/AppsFlyerLib.framework'
        ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
        ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
        ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
        ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
   end
+  s.subspec 'MacCatalyst' do |ss|
+       ss.ios.preserve_paths = 'MacCatalyst/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'MacCatalyst/AppsFlyerLib.xcframework'
+       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
+       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+  end
+  
 
 end
