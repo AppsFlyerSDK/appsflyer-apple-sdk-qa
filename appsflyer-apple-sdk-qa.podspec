@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.2.3.68'
+    s.version          = '0.0.1.1'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
 
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '9.0'
     s.tvos.deployment_target = '9.0'
     s.osx.deployment_target = '10.11'
 
@@ -26,29 +26,44 @@ Pod::Spec.new do |s|
 
     s.default_subspecs = 'Main'
     s.subspec 'Main' do |ss|
-       ss.ios.preserve_paths = 'iOS/AppsFlyerLib.framework'
-       ss.ios.vendored_frameworks = 'iOS/AppsFlyerLib.framework'
-       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
-       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
-       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
-       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+       ss.ios.preserve_paths = 'm1/ios/AppsFlyerLib.framework'
+       ss.ios.vendored_frameworks = 'm1/ios/AppsFlyerLib.framework'
+       ss.tvos.preserve_paths = 'm1/tv/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'm1/tv/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
   end
   s.subspec 'Strict' do |ss|
-       ss.ios.preserve_paths = 'iOS-Strict/AppsFlyerLib.framework'
-       ss.ios.vendored_frameworks = 'iOS-Strict/AppsFlyerLib.framework'
-       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
-       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
-       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
-       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+       ss.ios.preserve_paths = 'm1/ios-strict/AppsFlyerLib.framework'
+       ss.ios.vendored_frameworks = 'm1/ios-strict/AppsFlyerLib.framework'
+       ss.tvos.preserve_paths = 'm1/tv/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'm1/tv/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
   end
   s.subspec 'MacCatalyst' do |ss|
-       ss.ios.preserve_paths = 'MacCatalyst/AppsFlyerLib.xcframework'
-       ss.ios.vendored_frameworks = 'MacCatalyst/AppsFlyerLib.xcframework'
-       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
-       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
-       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
-       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+       ss.ios.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.tvos.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.tvos.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
   end
-  
+    s.subspec 'XCFramework' do |ss|
+       ss.ios.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.tvos.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.tvos.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+  end
+    s.subspec 'Dynamic' do |ss|
+       ss.ios.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.tvos.preserve_paths = 'tm1/xcframework/xcframeworks/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.framework'
+       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.framework'
+  end
 
 end
