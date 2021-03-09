@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '0.0.1.1'
+    s.version          = '0.0.1.2'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
 
     s.default_subspecs = 'Main'
     s.subspec 'Main' do |ss|
-       ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e' }
-       ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e' }
+       ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
+       ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
        ss.ios.preserve_paths = 'm1/ios/AppsFlyerLib.framework'
        ss.ios.vendored_frameworks = 'm1/ios/AppsFlyerLib.framework'
        ss.tvos.preserve_paths = 'm1/tv/AppsFlyerLib.framework'
@@ -36,8 +36,8 @@ Pod::Spec.new do |s|
        ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
   end
   s.subspec 'Strict' do |ss|
-       ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e' }
-       ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e' }
+       ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
+       ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
        ss.ios.preserve_paths = 'm1/ios-strict/AppsFlyerLib.framework'
        ss.ios.vendored_frameworks = 'm1/ios-strict/AppsFlyerLib.framework'
        ss.tvos.preserve_paths = 'm1/tv/AppsFlyerLib.framework'
