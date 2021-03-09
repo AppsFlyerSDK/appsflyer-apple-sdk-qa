@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '0.0.1.4'
+    s.version          = '0.0.1.5'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -75,8 +75,8 @@ Pod::Spec.new do |s|
        ss.ios.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib-Dynamic.xcframework'
        #ss.tvos.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
        #ss.tvos.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
-       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib-Dynamic.xcframework'
-       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib-Dynamic.xcframework'
+       ss.osx.preserve_paths = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'm1/xcframework/xcframeworks/AppsFlyerLib.xcframework'
 
        ss.tvos.preserve_paths = 'm1/tv/AppsFlyerLib.framework'
        ss.tvos.vendored_frameworks = 'm1/tv/AppsFlyerLib.framework'
