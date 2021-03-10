@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '0.0.1.5'
+    s.version          = '0.0.1.6'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -25,8 +25,9 @@ Pod::Spec.new do |s|
     s.default_subspecs = 'Main'
     s.subspec 'Main' do |ss|
 
-      ss.tvos.deployment_target = '9.0'
-      ss.tvos.frameworks  = 'Security'
+
+      #ss.tvos.deployment_target = '9.0'
+      #ss.tvos.frameworks  = 'Security'
 
        ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
        ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
