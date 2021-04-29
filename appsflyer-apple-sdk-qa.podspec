@@ -67,9 +67,9 @@ Pod::Spec.new do |s|
 
        ss.tvos.preserve_paths = 'Dynamic/AppsFlyerLib.xcframework'
        ss.tvos.vendored_frameworks = 'Dynamic/AppsFlyerLib.xcframework'
-
-       ss.osx.preserve_paths = 'Dynamic/AppsFlyerLib.xcframework'
-       ss.osx.vendored_frameworks = 'Dynamic/AppsFlyerLib.xcframework'
+       # Dynamic framework does not support pure OSX yet
+       ss.osx.preserve_paths = 'AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'AppsFlyerLib.xcframework'
   end
 
 end
