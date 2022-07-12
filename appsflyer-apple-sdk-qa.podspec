@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.8.0.81'
+    s.version          = '6.8.0.82'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
