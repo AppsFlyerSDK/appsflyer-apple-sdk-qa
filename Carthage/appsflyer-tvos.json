@@ -18,5 +18,6 @@
  "6.6.1": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.6.1.75/appsflyer-tvos.framework.zip",
  "6.7.0": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.7.0.80/appsflyer-tvos.framework.zip",
  "6.8.0": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.0.82/appsflyer-tvos.framework.zip",
- "6.8.1": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.1.85/appsflyer-tvos.framework.zip"
+ "6.8.1": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.1.85/appsflyer-tvos.framework.zip",
+ "6.9.0": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.0.87/appsflyer-tvos.framework.zip"
 }
