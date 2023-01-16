@@ -20,5 +20,6 @@
  "6.8.0": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.0.82/appsflyer-strict.framework.zip?alt=https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.0.82/AppsFlyerLib-Strict.xcframework.zip",
  "6.8.1": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.1.85/appsflyer-strict.framework.zip?alt=https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.8.1.85/AppsFlyerLib-Strict.xcframework.zip",
  "6.9.0": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.0.89/appsflyer-strict.framework.zip?alt=https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.0.89/AppsFlyerLib-Strict.xcframework.zip",
- "6.9.1": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.1.91/appsflyer-strict.framework.zip?alt=https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.1.91/AppsFlyerLib-Strict.xcframework.zip"
+ "6.9.1": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.1.91/appsflyer-strict.framework.zip?alt=https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.1.91/AppsFlyerLib-Strict.xcframework.zip",
+ "6.9.2": "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.2.93/appsflyer-strict.framework.zip?alt=https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.9.2.93/AppsFlyerLib-Strict.xcframework.zip"
 }
