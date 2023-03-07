@@ -2,8 +2,8 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.10.0.103 (103)
-//  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
+//  AppsFlyer iOS SDK 6.10.1.105 (105)
+//  Copyright (c) 2012-2023 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -139,6 +139,24 @@ typedef enum  {
     /// SHA256
     EmailCryptTypeSHA256 = 3
 } EmailCryptType;
+
+typedef NS_CLOSED_ENUM(NSInteger, AFSDKPlugin) {
+    AFSDKPluginIOSNative,
+    AFSDKPluginUnity,
+    AFSDKPluginFlutter,
+    AFSDKPluginReactNative,
+    AFSDKPluginAdobeAir,
+    AFSDKPluginAdobeMobile,
+    AFSDKPluginCocos2dx,
+    AFSDKPluginCordova,
+    AFSDKPluginMparticle,
+    AFSDKPluginNativeScript,
+    AFSDKPluginExpo,
+    AFSDKPluginUnreal,
+    AFSDKPluginXamarin,
+    AFSDKPluginCapacitor,
+} NS_SWIFT_NAME(AppsFlyerPlugin);
+
 
 NS_SWIFT_NAME(DeepLinkDelegate)
 @protocol AppsFlyerDeepLinkDelegate <NSObject>
@@ -294,10 +312,13 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
 @property(atomic) BOOL anonymizeUser;
 
 /**
- Opt-out for Apple Search Ads attributions
+ Deprecated. This API has no effect, since the SDK is no longer fetching Apple Search Ads data from the iAd Framework. iAd Framework has been deprecated by Apple. For more information, see here: https://developer.apple.com/documentation/iad/iad_changelog
  */
-@property(atomic) BOOL disableCollectASA;
+@property(atomic) BOOL disableCollectASA DEPRECATED_MSG_ATTRIBUTE("Deprecated. This API has no effect, since the SDK is no longer fetching Apple Search Ads data from the iAd Framework.");
 
+/**
+ Disable Apple Ads Attribution API +[AAAtribution attributionTokenWithError:]
+ */
 @property(nonatomic) BOOL disableAppleAdsAttribution;
 
 /**
@@ -367,6 +388,14 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  </pre>
  */
 @property(nonatomic, nullable) NSString *currentDeviceLanguage;
+
+/**
+ Internal API. Please don't use.
+ */
+- (void)setPluginInfoWith:(AFSDKPlugin)plugin
+            pluginVersion:(NSString *)version
+         additionalParams:(NSDictionary * _Nullable)additionalParams
+NS_SWIFT_NAME(setPluginInfo(plugin:version:additionalParams:));
 
 /**
  Enable the collection of Facebook Deferred AppLinks
