@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.platform     = :ios, :tvos, :osx
     s.source       = {
         http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.11.1.118/AppsFlyerLib-Binaries.zip",
-        sha256: "a9aac683326d4ca8516aab60157e29137fd8ccb9cb21a07cc3dc9bb4e28ed4f0"
+        sha256: "9644c7bd4fabd18829f8abe1cf23521ec93953109e8ed15fb6a047cac79588ae"
     }
 
     s.ios.deployment_target = '9.0'
