@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.11.2.121'
+    s.version          = '6.11.2.122'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
     s.source       = {
-        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.11.2.121/AppsFlyerLib-Binaries.zip",
-        sha256: "bdd36f538c1984c3d0008a228bd0c5cef769386249fe04951f012ad50e8fb0ad"
+        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.11.2.122/AppsFlyerLib-Binaries.zip",
+        sha256: "db9f584986017d00d6180126bcfdc8bc8887714f399b7439f8186660133c214c"
     }
 
     s.ios.deployment_target = '9.0'
