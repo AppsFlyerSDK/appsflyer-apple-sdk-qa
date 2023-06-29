@@ -17,18 +17,18 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AppsFlyerLib",
-            url: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.12.0.124/AppsFlyerLib.xcframework.zip",
-            checksum: "cc5ed97376e7c3d487bfaf6a5f29530b6d30ab0e8c362c3e7e5eaba4c7be1f73"
+            url: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.12.1.126/AppsFlyerLib.xcframework.zip",
+            checksum: "18d6774067bd9c8b93cb7239b8050192f9d6898e1dfa94338b39e39d20fa5906"
         ),
         .binaryTarget(
             name: "AppsFlyerLib-Strict",
-            url: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.12.0.124/AppsFlyerLib-Strict.xcframework.zip",
-            checksum: "bb6a9503d93e66efd2787cef78b3020cab62608692ebd69966f62901bbbe6cab"
+            url: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.12.1.126/AppsFlyerLib-Strict.xcframework.zip",
+            checksum: "73f4f04674e96845eda6c1acbc99f126e7fa67ef6967ace37cab3cd0f451dbaf"
         ),
         .binaryTarget(
             name: "AppsFlyerLib-Dynamic",
-            url: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.12.0.124/AppsFlyerLib-Dynamic.xcframework.zip",
-            checksum: "43d4cfc5e4f4aeea201c694b3d4aca0664de7b48a5d444524800c6b8c67ffbf2"
+            url: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.12.1.126/AppsFlyerLib-Dynamic.xcframework.zip",
+            checksum: "a5a55769122ae87284958734e968d3d937a53cf81b9c23eaebcb0e4ac813dc80"
         ),
     ]
 )
