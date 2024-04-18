@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.14.1.156'
+    s.version          = '6.14.1.169'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -15,12 +15,12 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
     s.source       = {
-        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.1.156/AppsFlyerLib-Binaries.zip",
-        sha256: "8302ce4476a4f4e9faca2354e73125b8068d1e6882d84b90a245c32f391b0704"
+        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.1.169/AppsFlyerLib-Binaries.zip",
+        sha256: "2e3d623942f03f1656ca03b5f83eebcbbe159c8e29db36b2fc24de39a3cc39aa"
     }
 
-    s.ios.deployment_target = '9.0'
-    s.tvos.deployment_target = '9.0'
+    s.ios.deployment_target = '12.0'
+    s.tvos.deployment_target = '12.0'
     s.osx.deployment_target = '10.11'
 
     s.ios.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony'
