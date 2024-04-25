@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.14.2.171'
+    s.version          = '6.14.3.173'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
-    s.resource_bundles = {'AppsFlyerLib_Privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+	s.resource_bundles = {'AppsFlyerLib_Privacy' => ['Resources/PrivacyInfo.xcprivacy']}
     s.source       = {
-        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.2.171/AppsFlyerLib-Binaries.zip",
-        sha256: "431b4bb3464da314a55ae152abec1ba90c35429ac6b4362770e85a33760957ac"
+        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.3.173/AppsFlyerLib-Binaries.zip",
+        sha256: "5c2f33b5c3744b3913cd17fb35dc9de023e9109ab0888e5157e18df7b55c9f2e"
     }
 
     s.ios.deployment_target = '12.0'
@@ -30,7 +30,9 @@ Pod::Spec.new do |s|
 
     s.subspec 'Main' do |ss|
        ss.ios.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
+
        ss.tvos.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
+
        ss.osx.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
     end
 
