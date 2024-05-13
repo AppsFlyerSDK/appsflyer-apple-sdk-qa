@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.14.3.176'
+    s.version          = '6.14.4.178'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -14,11 +14,11 @@ Pod::Spec.new do |s|
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
-	s.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/PrivacyInfo.xcprivacy']}
+
 
     s.source       = {
-        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.3.176/AppsFlyerLib-Binaries.zip",
-        sha256: "5319a4f0878bb1445a2a6e99d8d82460c7378f1afc89ad322bcb7745c3403067"
+        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.4.178/AppsFlyerLib-Binaries.zip",
+        sha256: "5220cb69838bfb18ae771ea74267ea7b04661037cfb33b482d4261e6b02187fb"
     }
 
     s.ios.deployment_target = '12.0'
@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
 	s.default_subspecs = 'Main'
 
     s.subspec 'Main' do |ss|
+       ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/nonStrict/PrivacyInfo.xcprivacy']}
        ss.ios.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
 
        ss.tvos.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
@@ -38,7 +39,7 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Legacy' do |ss|
-
+       ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/nonStrict/PrivacyInfo.xcprivacy']}
        ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
        ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
 
@@ -49,6 +50,7 @@ Pod::Spec.new do |s|
        ss.osx.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
   end
   s.subspec 'Strict' do |ss|
+	   ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/Strict/PrivacyInfo.xcprivacy']}
        ss.ios.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
 
        ss.tvos.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
@@ -57,6 +59,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Dynamic' do |ss|
+       ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/nonStrict/PrivacyInfo.xcprivacy']}
        ss.ios.vendored_frameworks = 'binaries/xcframework/dynamic/AppsFlyerLib.xcframework'
 
        ss.tvos.vendored_frameworks = 'binaries/xcframework/dynamic/AppsFlyerLib.xcframework'
