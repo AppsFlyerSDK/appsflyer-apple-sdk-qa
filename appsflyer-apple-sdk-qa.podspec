@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.14.4.179'
+    s.version          = '6.14.4.184'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
 
 
     s.source       = {
-        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.4.179/AppsFlyerLib-Binaries.zip",
-        sha256: "1f41a78d017a78458a39712f1e6660f9f596683aaacdccb2f4ced592ec45b957"
+        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.14.4.184/AppsFlyerLib-Binaries.zip",
+        sha256: "8f28b79b684ed998e9822630f924decab4e01b80756452d8c315d337ab5bc31a"
     }
 
     s.ios.deployment_target = '12.0'
@@ -59,7 +59,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Dynamic' do |ss|
-       ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/nonStrict/PrivacyInfo.xcprivacy']}
        ss.ios.vendored_frameworks = 'binaries/xcframework/dynamic/AppsFlyerLib.xcframework'
 
        ss.tvos.vendored_frameworks = 'binaries/xcframework/dynamic/AppsFlyerLib.xcframework'
