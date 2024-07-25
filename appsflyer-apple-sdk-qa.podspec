@@ -14,11 +14,11 @@ Pod::Spec.new do |s|
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
-
+    s.swift_version = '5.0'
 
     s.source       = {
         http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.15.0.206/AppsFlyerLib-Binaries.zip",
-        sha256: "1ef1eb48843f12e986cc5c79fe32eef1a1fac63536341f6932c47bc6a8e17679"
+        sha256: "7d3d86718cc8c29c5c9c52629adb88e247adc5b932ddf3c8b3d7cdd567d7e3d7"
     }
 
     s.ios.deployment_target = '12.0'
