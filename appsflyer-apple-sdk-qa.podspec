@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'appsflyer-apple-sdk-qa'
-    s.version          = '6.16.2.229'
+    s.version          = '6.17.0.19450585'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -11,15 +11,15 @@ Pod::Spec.new do |s|
 
     s.homepage         = 'https://www.appsflyer.com'
     s.license          = { :type => 'Proprietary', :text => 'Copyright 2018 AppsFlyer Ltd. All rights reserved.' }
-    s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
+    s.author           = { 'Maxim' => 'maxim@appsflyer.com', 'Andrii' => 'andrii.h@appsflyer.com' }
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
- 	s.swift_version = '5.0'
+     s.swift_version = '5.0'
 
 
     s.source       = {
-        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.16.2.229/AppsFlyerLib-Binaries.zip",
-        sha256: "9b9a85668307291ef4eb1804212b5a9fcb31f921a0d73357a54e85cf59c28c29"
+        http: "https://github.com/AppsFlyerSDK/appsflyer-apple-sdk-qa/releases/download/6.17.0.19450585/AppsFlyerLib-Binaries.zip",
+        sha256: "3995f4d70ce276c3ef426d7a67614b269b1dafac784061ca1307dc1530aa5f68"
     }
 
     s.ios.deployment_target = '12.0'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
     s.ios.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony'
     s.osx.frameworks  = 'Security'
-	s.default_subspecs = 'Main'
+    s.default_subspecs = 'Main'
 
     s.subspec 'Main' do |ss|
        ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/nonStrict/PrivacyInfo.xcprivacy']}
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
        ss.osx.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
   end
   s.subspec 'Strict' do |ss|
-	   ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/Strict/PrivacyInfo.xcprivacy']}
+       ss.resource_bundles = {'AppsFlyerLib_Privacy' => ['binaries/Resources/Strict/PrivacyInfo.xcprivacy']}
        ss.ios.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
 
        ss.tvos.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
